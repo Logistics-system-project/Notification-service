@@ -1,0 +1,10 @@
+### 슬랙 메시지
+POST localhost:19091/api/slack-messages
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJ1c2VyX2lkIjoxMCwicm9sZSI6Ik1BU1RFUiIsImlzcyI6ImF1dGgtc2VydmljZSIsImlhdCI6MTczNDMyNzAwNCwiZXhwIjoxNzM0MzMwNjA0fQ.Yx4pyeY_YjJ95GPsKU6ghuytiWnCzM27MY5UiSS0bUCLccpmCBrKewx9jSzhgNZ5SuphJZfqW2eXR0gvYydaBQ
+
+{
+  "messageContent": "테스트3",
+  "senderUserId": 1,
+  "receiverUserId": 2
+}
