@@ -28,6 +28,6 @@ sql:
 
 slack:
   bot:
-    token: ${SLACK_BOT_TOKEN}
+    token: testtoken
   signing:
-    secret: ${SLACK_SIGNING_SECRET}
+    secret: testsigningsecret
