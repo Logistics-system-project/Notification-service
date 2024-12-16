@@ -36,6 +36,8 @@ public class SlackMessageService {
                 userResponse.senderUserId(),
                 userResponse.receiverUserId());
 
+        slackMessageRepository.save(slackMessage);
+
         // 이벤트 발행
         eventPublisher.publishEvent(new SlackMessageCreatedEvent(
                 createRequest.messageContent(),
@@ -45,6 +47,6 @@ public class SlackMessageService {
                 userResponse.receiverSlackId()
         ));
 
-        return SlackMessageResponse.from(slackMessageRepository.save(slackMessage), userResponse);
+        return SlackMessageResponse.from(slackMessage, userResponse);
     }
 }

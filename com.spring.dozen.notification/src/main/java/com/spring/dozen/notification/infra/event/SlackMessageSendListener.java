@@ -11,12 +11,12 @@ import org.springframework.stereotype.Component;
 
 @Slf4j
 @RequiredArgsConstructor
-@Async
 @Component
 public class SlackMessageSendListener {
     private final MethodsClient slackClient;
 
-    @EventListener
+    @Async
+    @EventListener(SlackMessageCreatedEvent.class)
     public void handleSlackMessageSend(SlackMessageCreatedEvent event) {
         try {
             log.info("handleSlackMessageSend.SlackMessageCreatedEvent: {}", event);
