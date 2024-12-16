@@ -2,7 +2,7 @@ package com.spring.dozen.notification.infra.event;
 
 import com.slack.api.methods.MethodsClient;
 import com.slack.api.methods.response.chat.ChatPostMessageResponse;
-import com.spring.dozen.notification.application.dto.SlackMessageCreatedEvent;
+import com.spring.dozen.notification.application.dto.slack.SlackMessageCreatedEvent;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.event.EventListener;
