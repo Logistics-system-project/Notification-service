@@ -9,5 +9,7 @@ Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJ1c2VyX2lkIjoxMCwicm9sZSI6Ik1BU1RFU
   "departureAddress": "서울특별시 강남구 테헤란로 123",
   "arrivalHubId": "123e4567-e89b-12d3-a456-426614174002",
   "arrivalAddress": "부산광역시 해운대구 센텀중앙로 55",
-  "deliveryDeadline": "2024-12-20T21:00:00"
+  "deliveryDeadline": "2024-12-20T21:00:00",
+  "senderUserId": 1,
+  "receiverUserId": 2
 }

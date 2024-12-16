@@ -9,6 +9,8 @@ public record AICreate(
         String departureAddress,
         UUID arrivalHubId,
         String arrivalAddress,
-        LocalDateTime deliveryDeadline
+        LocalDateTime deliveryDeadline,
+        Long senderUserId,
+        Long receiverUserId
 ) {
 }
