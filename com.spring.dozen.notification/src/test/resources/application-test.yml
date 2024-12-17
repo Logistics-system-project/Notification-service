@@ -31,3 +31,9 @@ slack:
     token: testtoken
   signing:
     secret: testsigningsecret
+
+
+gemini:
+  api:
+    url: https://generativelanguage.googleapis.com/v1beta/models/gemini-pro:generateContent
+    key: testapikey

@@ -1,4 +1,4 @@
-package com.spring.dozen.notification.application.dto;
+package com.spring.dozen.notification.application.dto.slack;
 
 import com.spring.dozen.notification.application.client.dto.UserResponse;
 import com.spring.dozen.notification.domain.entity.SlackMessage;

@@ -1,0 +1,15 @@
+### ai 생성 - 최종 시한
+POST localhost:19091/api/ai/dispatch
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJ1c2VyX2lkIjoxMCwicm9sZSI6Ik1BU1RFUiIsImlzcyI6ImF1dGgtc2VydmljZSIsImlhdCI6MTczNDM1MTg3OCwiZXhwIjoxNzM0MzU1NDc4fQ.l-jTJ0tUOYiqT7EXn3n4rLDIWhepdVRNFn8I43ayxLPlJOuJ5fipUQ8HGot5Fogh8YqSOeUJTxVGSIXJJTWE-g
+
+{
+  "orderId": "123e4567-e89b-12d3-a456-426614174000",
+  "departureHubId": "123e4567-e89b-12d3-a456-426614174001",
+  "departureAddress": "서울특별시 강남구 테헤란로 123",
+  "arrivalHubId": "123e4567-e89b-12d3-a456-426614174002",
+  "arrivalAddress": "부산광역시 해운대구 센텀중앙로 55",
+  "deliveryDeadline": "2024-12-20T21:00:00",
+  "senderUserId": 1,
+  "receiverUserId": 2
+}
