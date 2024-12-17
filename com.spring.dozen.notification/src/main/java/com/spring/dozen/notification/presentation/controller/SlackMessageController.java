@@ -1,5 +1,6 @@
 package com.spring.dozen.notification.presentation.controller;
 
+import com.spring.dozen.notification.application.aspect.RequireRole;
 import com.spring.dozen.notification.application.dto.slack.SlackMessageResponse;
 import com.spring.dozen.notification.application.service.SlackMessageService;
 import com.spring.dozen.notification.presentation.dto.ApiResponse;
@@ -18,9 +19,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class SlackMessageController {
     private final SlackMessageService slackMessageService;
 
+    @RequireRole({"MASTER", "HUB_MANAGER", "HUB_DELIVERY_STAFF", "COMPANY_DELIVERY_STAFF"})
     @PostMapping
     public ApiResponse<SlackMessageResponse> send(@RequestBody SlackMessageCreateRequest request) {
-        log.info("Sending Slack message: {}", request);
         return ApiResponse.process(slackMessageService.send(request.toServiceDto()));
     }
 }
