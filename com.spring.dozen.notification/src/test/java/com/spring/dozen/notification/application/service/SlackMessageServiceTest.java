@@ -3,7 +3,7 @@ package com.spring.dozen.notification.application.service;
 import com.spring.dozen.notification.application.client.UserClient;
 import com.spring.dozen.notification.application.client.dto.UserResponse;
 import com.spring.dozen.notification.application.dto.slack.SlackMessageCreate;
-import com.spring.dozen.notification.application.dto.slack.SlackMessageResponse;
+import com.spring.dozen.notification.application.dto.slack.SlackMessageCreateResponse;
 import com.spring.dozen.notification.application.exception.NotificationException;
 import com.spring.dozen.notification.domain.repository.SlackMessageRepository;
 import org.junit.jupiter.api.DisplayName;
@@ -49,7 +49,7 @@ class SlackMessageServiceTest {
                 .willReturn(new UserResponse(senderUserId, senderSlackId, receiverUserId, receiverSlackId));
 
         // when
-        SlackMessageResponse response = slackMessageService.send(createRequest);
+        SlackMessageCreateResponse response = slackMessageService.send(createRequest);
 
         // then
         assertThat(response).isNotNull();

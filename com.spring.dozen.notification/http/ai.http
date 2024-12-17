@@ -13,3 +13,8 @@ Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJ1c2VyX2lkIjoxMCwicm9sZSI6Ik1BU1RFU
   "senderUserId": 1,
   "receiverUserId": 2
 }
+
+### 생성한 목록 조회
+GET localhost:19091/api/ai/dispatch?page0&size=3
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJ1c2VyX2lkIjoxMCwicm9sZSI6Ik1BU1RFUiIsImlzcyI6ImF1dGgtc2VydmljZSIsImlhdCI6MTczNDQxNzgyMywiZXhwIjoxNzM0NDIxNDIzfQ.o0YxjrhCnSV3mKK46BWnmMwlmh15Yire7x_rQXdtuqA6L0m2zjbIAUK6CF9XeOduaRFIjQsfJwv8xFj2xhOqcA
