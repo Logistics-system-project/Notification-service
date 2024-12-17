@@ -2,9 +2,9 @@ package com.spring.dozen.notification.application.service;
 
 import com.spring.dozen.notification.application.client.UserClient;
 import com.spring.dozen.notification.application.client.dto.UserResponse;
-import com.spring.dozen.notification.application.dto.SlackMessageCreate;
-import com.spring.dozen.notification.application.dto.SlackMessageCreatedEvent;
-import com.spring.dozen.notification.application.dto.SlackMessageResponse;
+import com.spring.dozen.notification.application.dto.slack.SlackMessageCreate;
+import com.spring.dozen.notification.application.dto.slack.SlackMessageCreatedEvent;
+import com.spring.dozen.notification.application.dto.slack.SlackMessageResponse;
 import com.spring.dozen.notification.application.exception.NotificationErrorCode;
 import com.spring.dozen.notification.application.exception.NotificationException;
 import com.spring.dozen.notification.domain.entity.SlackMessage;

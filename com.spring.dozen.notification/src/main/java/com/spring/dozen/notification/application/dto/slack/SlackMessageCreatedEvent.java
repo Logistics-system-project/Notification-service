@@ -1,4 +1,4 @@
-package com.spring.dozen.notification.application.dto;
+package com.spring.dozen.notification.application.dto.slack;
 
 public record SlackMessageCreatedEvent(
         String messageContent,

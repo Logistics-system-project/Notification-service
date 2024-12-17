@@ -1,9 +1,9 @@
 package com.spring.dozen.notification.presentation.controller;
 
-import com.spring.dozen.notification.application.dto.SlackMessageResponse;
+import com.spring.dozen.notification.application.dto.slack.SlackMessageResponse;
 import com.spring.dozen.notification.application.service.SlackMessageService;
 import com.spring.dozen.notification.presentation.dto.ApiResponse;
-import com.spring.dozen.notification.presentation.dto.SlackMessageCreateRequest;
+import com.spring.dozen.notification.presentation.dto.slack.SlackMessageCreateRequest;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.PostMapping;
