@@ -2,6 +2,7 @@ package com.spring.dozen.notification.application.service;
 
 import com.spring.dozen.notification.application.client.UserClient;
 import com.spring.dozen.notification.application.client.dto.UserResponse;
+import com.spring.dozen.notification.application.dto.ai.AiListResponse;
 import com.spring.dozen.notification.application.dto.ai.AiResponse;
 import com.spring.dozen.notification.application.dto.ai.AICreate;
 import com.spring.dozen.notification.application.dto.slack.SlackMessageCreatedEvent;
@@ -10,13 +11,17 @@ import com.spring.dozen.notification.domain.repository.AIRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.ApplicationEventPublisher;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
+import java.util.UUID;
 
 @Slf4j
 @RequiredArgsConstructor
+@Transactional(readOnly = true)
 @Service
 public class AIService {
     private final AIRepository aiRepository;
@@ -56,6 +61,11 @@ public class AIService {
         ));
 
         return AiResponse.from(ai, createRequest);
+    }
+
+    public Page<AiListResponse> searchPage(UUID orderId, UUID departureHubId, UUID arrivalHubId, Pageable pageable) {
+        Page<AI> aiPage = aiRepository.searchWithPage(orderId, departureHubId, arrivalHubId, pageable);
+        return aiPage.map(AiListResponse::from);
     }
 
 }

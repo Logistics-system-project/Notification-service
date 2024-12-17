@@ -1,4 +1,4 @@
-package com.spring.dozen.notification.infra.repository;
+package com.spring.dozen.notification.infra.repository.slack;
 
 import com.spring.dozen.notification.domain.entity.SlackMessage;
 import com.spring.dozen.notification.domain.repository.SlackMessageRepository;
