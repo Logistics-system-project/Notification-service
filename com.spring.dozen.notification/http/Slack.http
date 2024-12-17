@@ -8,3 +8,8 @@ Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJ1c2VyX2lkIjoxMCwicm9sZSI6Ik1BU1RFU
   "senderUserId": 1,
   "receiverUserId": 2
 }
+
+### 슬랙 메시지 단건 조회
+GET localhost:19091/api/slack-messages/1dc6644d-4b59-484f-9818-72170b2e2ca5
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJ1c2VyX2lkIjoxMCwicm9sZSI6Ik1BU1RFUiIsImlzcyI6ImF1dGgtc2VydmljZSIsImlhdCI6MTczNDQxODg3OSwiZXhwIjoxNzM0NDIyNDc5fQ.hhLLn3A6UMUyqk1ILnmv2ZVAkDJE63mzQbisTIygojXh65_8VrA2C0j7kKHfhYwnfk5k2m7YJHnJitaW12nnvA

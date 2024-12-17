@@ -1,7 +1,7 @@
 package com.spring.dozen.notification.presentation.controller;
 
 import com.spring.dozen.notification.application.aspect.RoleCheckAspect;
-import com.spring.dozen.notification.application.dto.slack.SlackMessageResponse;
+import com.spring.dozen.notification.application.dto.slack.SlackMessageCreateResponse;
 import com.spring.dozen.notification.application.service.SlackMessageService;
 import com.spring.dozen.notification.infra.config.aop.AopConfig;
 import org.junit.jupiter.api.DisplayName;
@@ -36,8 +36,8 @@ class SlackMessageControllerTest {
     @DisplayName("MASTER 권한인 경우 status 200")
     @Test
     void sendMessageWithMasterRole() throws Exception {
-        SlackMessageResponse mockResponse
-                = new SlackMessageResponse(
+        SlackMessageCreateResponse mockResponse
+                = new SlackMessageCreateResponse(
                 UUID.randomUUID(),
                 "테스트 메시지",
                 1L,

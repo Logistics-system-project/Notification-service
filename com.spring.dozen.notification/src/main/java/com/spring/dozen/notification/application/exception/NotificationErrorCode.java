@@ -17,7 +17,9 @@ public enum NotificationErrorCode {
     SLACK_MESSAGE_SEND_FAILED(HttpStatus.NOT_FOUND,"슬랙 메시지 전송에 실패했습니다."),
 
     // User;
-    USER_NOT_FOUND(HttpStatus.NOT_FOUND, "발신자 또는 수신자 정보가 존재하지 않습니다.")
+    USER_NOT_FOUND(HttpStatus.NOT_FOUND, "발신자 또는 수신자 정보가 존재하지 않습니다."),
+
+
 
     ;
 

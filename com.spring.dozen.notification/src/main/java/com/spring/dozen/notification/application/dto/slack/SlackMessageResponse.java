@@ -1,6 +1,5 @@
 package com.spring.dozen.notification.application.dto.slack;
 
-import com.spring.dozen.notification.application.client.dto.UserResponse;
 import com.spring.dozen.notification.domain.entity.SlackMessage;
 
 import java.time.LocalDateTime;
@@ -10,20 +9,16 @@ public record SlackMessageResponse(
         UUID slackMessageId,
         String messageContent,
         Long senderUserId,
-        String senderSlackId,
         Long receiverUserId,
-        String receiverSlackId,
         LocalDateTime sentAt
 ) {
-    public static SlackMessageResponse from(SlackMessage slackMessage, UserResponse userResponse) {
+    public static SlackMessageResponse from(SlackMessage message) {
         return new SlackMessageResponse(
-                slackMessage.getId(),
-                slackMessage.getMessageContent(),
-                slackMessage.getSenderUserId(),
-                userResponse.senderSlackId(),
-                slackMessage.getReceiverUserId(),
-                userResponse.receiverSlackId(),
-                slackMessage.getSentAt()
+                message.getId(),
+                message.getMessageContent(),
+                message.getSenderUserId(),
+                message.getReceiverUserId(),
+                message.getSentAt()
         );
     }
 }
