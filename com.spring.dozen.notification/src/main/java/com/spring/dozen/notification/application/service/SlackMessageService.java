@@ -13,6 +13,8 @@ import com.spring.dozen.notification.domain.repository.SlackMessageRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.ApplicationEventPublisher;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -20,6 +22,7 @@ import java.util.UUID;
 
 @Slf4j
 @RequiredArgsConstructor
+@Transactional(readOnly = true)
 @Service
 public class SlackMessageService {
     private final SlackMessageRepository slackMessageRepository;
@@ -58,5 +61,10 @@ public class SlackMessageService {
                 .orElseThrow(() -> new NotificationException(NotificationErrorCode.NOTIFICATION_NOT_FOUND));
 
         return SlackMessageResponse.from(slackMessage);
+    }
+
+    public Page<SlackMessageResponse> searchPage(Long senderUserId, Long receiverUserId, Pageable pageable) {
+        Page<SlackMessage> slackMessagePage = slackMessageRepository.searchWithPage(senderUserId, receiverUserId, pageable);
+        return slackMessagePage.map(SlackMessageResponse::from);
     }
 }

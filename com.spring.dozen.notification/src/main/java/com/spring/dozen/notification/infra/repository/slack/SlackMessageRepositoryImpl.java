@@ -7,5 +7,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.UUID;
 
 public interface SlackMessageRepositoryImpl
-        extends JpaRepository<SlackMessage, UUID>, SlackMessageRepository{
+        extends JpaRepository<SlackMessage, UUID>, SlackMessageRepository, SlackMessageRepositoryCustom{
 }
